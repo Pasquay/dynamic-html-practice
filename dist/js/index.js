@@ -1,5 +1,5 @@
 function fetchCourses(){
-    fetch('src/json/courses.json') //    ../../src/json/courses.json
+    fetch('../../src/json/courses.json')
     .then(response => {
         if(!response.ok){
             throw new Error("Cant get response");
