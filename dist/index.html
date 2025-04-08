@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="fetchCourses()" class="flex bg-gray-100 justify-center">
+    <div id="course-container" class="flex flex-col p-4 m-6  mr-0"> 
+        <h1 class="text-center text-lg mb-2">AVAILABLE COURSES</h1>
+        <div id="course-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <template id="course-template">
+                <div id="course" class="bg-white p-4 w-100 text-center rounded-md shadow-md transition duration-300 hover:shadow-xl">
+                    <p  id="course-department-id" class="text-xs font-thin">Department - Course ID</p>
+                    <h1 id="course-title" class="font-semibold text-lg">Title</h1>
+                    <p id="course-instructor">Instructor</p>
+                    <p id="course-schedule" class="text-sm font-thin">Schedule (TTh - XX:XX - XX:XX)</p>
+                    <button id="enroll-button" class="bg-blue-500 text-white py-1 px-4 w-full mt-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300">Enroll</button>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <div id="enrolled-course-container" class="flex flex-col p-4 m-6 ml-0 hidden">
+        <h1 class="text-center text-lg mb-2">ENROLLED COURSES</h1>
+        <div  id="enrolled-course-list" class="grid grid-cols-1 gap-4">
+            <template id="enrolled-course-template">
+                <div id="enrolled-course" class="bg-white rounded-md shadow-md text-center p-4 w-60 transition duration-300 hover:shadow-xl">
+                    <p  id="enrolled-course-department-id" class="text-xs font-thin">Department - Course ID</p>
+                    <h1 id="enrolled-course-title" class="font-semibold text-lg">Title</h1>
+                    <p id="enrolled-course-schedule" class="text-sm font-thin">Schedule (TTh - XX:XX - XX:XX)</p>
+                </div>
+            </template>
+        </div>
+    </div>
+<script src="js/index.js"></script>
+</body>
+</html>
